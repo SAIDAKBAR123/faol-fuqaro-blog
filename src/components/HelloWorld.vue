@@ -4,10 +4,12 @@
       <v-row justify="center">
         <v-col cols="7">
           <v-card elevation="0">
-            <v-card-title>
-              <span class="header-text pb-3 text-center" >{{header}}</span>
-            </v-card-title>
             <v-card-subtitle>
+                <v-row class="py-0">
+                  <v-col class="py-0" cols="auto">
+                       <p class="header-text pb-3" >{{header}}</p>
+                  </v-col>
+                </v-row>
                 <v-row class="py-0">
                    <v-col cols="auto">
                     <v-row align="center" class="py-0">
@@ -23,7 +25,7 @@
                     </v-row>
                   </v-col>
                   <v-col class="py-0" cols="12">
-                    <v-img src="https://voicesoncentralasia.org/wp-content/uploads/2018/06/city21.jpg"></v-img>
+                    <v-img style="border-radius: 14px" src="https://voicesoncentralasia.org/wp-content/uploads/2018/06/city21.jpg"></v-img>
                   </v-col>
                 </v-row>
             </v-card-subtitle>
