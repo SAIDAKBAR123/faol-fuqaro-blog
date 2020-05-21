@@ -8,7 +8,24 @@
               <span class="header-text pb-3 text-center" >{{header}}</span>
             </v-card-title>
             <v-card-subtitle>
-              <v-img src="https://voicesoncentralasia.org/wp-content/uploads/2018/06/city21.jpg"></v-img>
+                <v-row class="py-0">
+                   <v-col cols="auto">
+                    <v-row align="center" class="py-0">
+                      <v-col align-self="center" class="py-0" cols="auto">
+                        <v-btn :ripple="false" class="py-0" text><v-icon left>mdi-calendar-clock</v-icon> 13:09</v-btn>
+                      </v-col>
+                       <v-col align-self="center" class="py-0" cols="auto">
+                          <v-btn :ripple="false" class="py-0" text><v-icon left>mdi-eye</v-icon> 42342</v-btn>
+                      </v-col>
+                       <v-col align-self="center" class="py-0" cols="auto">
+                        <v-btn :ripple="false" class="py-0" text>ulashish<v-icon right>mdi-share</v-icon></v-btn>
+                      </v-col>
+                    </v-row>
+                  </v-col>
+                  <v-col class="py-0" cols="12">
+                    <v-img src="https://voicesoncentralasia.org/wp-content/uploads/2018/06/city21.jpg"></v-img>
+                  </v-col>
+                </v-row>
             </v-card-subtitle>
             <v-card-text>
                 <span class="body-text pb-3" v-for="i in 3" :key="i">{{content}}</span>
