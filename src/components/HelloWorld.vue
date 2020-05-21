@@ -14,7 +14,7 @@
                    <v-col cols="auto">
                     <v-row align="center" class="py-0">
                       <v-col align-self="center" class="py-0" cols="auto">
-                        <v-btn :ripple="false" class="py-0" text><v-icon left>mdi-calendar-clock</v-icon> 13:09</v-btn>
+                        <v-btn color="blue lighten-2" dark :ripple="false" class="py-0" text><v-icon left>mdi-calendar-clock</v-icon> 13:09</v-btn>
                       </v-col>
                        <v-col align-self="center" class="py-0" cols="auto">
                           <v-btn :ripple="false" class="py-0" text><v-icon left>mdi-eye</v-icon> 42342</v-btn>
