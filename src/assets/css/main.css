@@ -1,0 +1,22 @@
+@font-face {
+    font-family: monts_reg;
+    src: url('../../assets/fonts/Montserrat-Regular.ttf');
+ }
+ @font-face {
+    font-family: monts_medium;
+    src: url('../../assets/fonts/Montserrat-Medium.ttf');
+ }
+
+ .body-text{
+    font-family: monts_reg;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 31px;
+    color: black;
+ }
+ .header-text {
+    font-family: monts_medium;
+    font-size: 26px;
+    line-height: 31px;
+    color: black;
+ }

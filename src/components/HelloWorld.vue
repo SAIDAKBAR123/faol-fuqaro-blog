@@ -1,60 +1,38 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router" target="_blank" rel="noopener">router</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-vuex" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div>
+    <v-container class="px-9">
+      <v-row justify="center">
+        <v-col cols="7">
+          <v-card elevation="0">
+            <v-card-title>
+              <span class="header-text pb-3 text-center" >{{header}}</span>
+            </v-card-title>
+            <v-card-subtitle>
+              <v-img src="https://voicesoncentralasia.org/wp-content/uploads/2018/06/city21.jpg"></v-img>
+            </v-card-subtitle>
+            <v-card-text>
+                <span class="body-text pb-3" v-for="i in 3" :key="i">{{content}}</span>
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  data () {
+    return {
+      header: '«Яшил» ва «сариқ» ҳудудларда очиқ сайилгоҳлар фаолиятига рухсат берилади',
+      content: `Республика махсус комиссияси қарорига кўра, 22 май кунидан Ўзбекистоннинг «яшил» ва «сариқ» тоифадаги ҳудудларида очиқ сайилгоҳ, музей ва санъат галереялари фаолиятига (ўйингоҳ ва овқатланиш шохобчалари бундан мустасно) рухсат берилади.
+                Бунда коронавирус инфекцияси иккинчи тўлқини олдини олиш мақсадида ушбу масканларга кириш жойларида мажбурий равишда барча ташриф буюрувчилар тана ҳароратларини ўлчанган ҳолда киритилиши (тепловизор ёки пирометр), шахсий ҳимоя воситаларида бўлишлари (ниқоб), шунингдек, ташриф буюрувчилар 2 метрлик ижтимоий масофани сақлаши талаб этилади.
+                Бундан ташқари, ушбу масканларда ташриф буюрувчилар уч кишидан кўп бўлиб тўпланиши олдини олиш бўйича мазкур сайилгоҳ, кўнгил очар маскан ва музейлар раҳбарияти зиммасига юклатилади.`
+    }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+<style>
+
 </style>
