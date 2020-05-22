@@ -2,7 +2,7 @@
   <div>
     <v-container class="px-9">
       <v-row justify="center">
-        <v-col cols="7">
+        <v-col cols="12" md="10" lg="10" xl="7">
           <v-card elevation="0">
             <v-card-subtitle>
                 <v-row class="py-0">
@@ -20,7 +20,7 @@
                           <v-btn :ripple="false" class="py-0" text><v-icon left>mdi-eye</v-icon> 42342</v-btn>
                       </v-col>
                        <v-col align-self="center" class="py-0" cols="auto">
-                        <v-btn :ripple="false" class="py-0" text>ulashish<v-icon right>mdi-share</v-icon></v-btn>
+                        <v-btn :ripple="false" class="py-0" text>{{$t('shareBtn')}}<v-icon right>mdi-share</v-icon></v-btn>
                       </v-col>
                     </v-row>
                   </v-col>
