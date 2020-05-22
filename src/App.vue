@@ -11,8 +11,7 @@
       <v-spacer></v-spacer>
 
       <v-btn
-        href="https://itsolutions.netlify.app/#/"
-        target="_blank"
+        to="/"
         text
       >
         <span class="mr-2">Asosiy Menu</span>
@@ -21,8 +20,8 @@
     </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
-      <v-footer padless>
+      <router-view></router-view>
+      <v-footer padless >
         <v-col
           class="text-center"
           cols="12"
@@ -35,14 +34,8 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
-
 export default {
   name: 'App',
-
-  components: {
-    HelloWorld
-  },
 
   data: () => ({
     //
