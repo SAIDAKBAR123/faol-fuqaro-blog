@@ -8,10 +8,11 @@
         <v-btn v-if="false" dark text :ripple="false"><v-icon left>mdi-arrow-left</v-icon> Орқага</v-btn>
       <v-spacer></v-spacer>
        <v-menu
-      bottom
-      origin="center center"
-      transition="scale-transition"
-    >
+        offset-y
+        bottom
+        origin="center center"
+        transition="scale-transition"
+      >
       <template v-slot:activator="{ on }">
         <v-btn
           rounded
@@ -20,7 +21,7 @@
           dark
           v-on="on"
         >
-          lang
+          <v-icon>mdi-google-translate</v-icon>
           <v-icon>mdi-chevron-down</v-icon>
         </v-btn>
       </template>
@@ -36,7 +37,7 @@
       </v-list>
     </v-menu>
       <v-btn
-        to="/"
+        href="https://faolfuqaro.netlify.app/"
         text
         dark
         rounded
@@ -74,17 +75,12 @@ export default {
       },
       {
         type: 'uz',
-        name: 'Uzbek'
+        name: 'O\'zbek'
       },
       {
         type: 'ru',
-        name: 'Russian'
-      },
-      {
-        type: 'krill',
-        name: 'Ўзбекча'
+        name: 'русский'
       }
-
     ]
     //
   }),
@@ -92,6 +88,7 @@ export default {
     setLocale (lang) {
       localStorage.setItem('lang', lang)
       this.$i18n.locale = lang
+      location.reload()
     }
   }
 }
@@ -100,8 +97,7 @@ export default {
 .component-fade-enter-active, .component-fade-leave-active {
   transition: opacity .3s ease;
 }
-.component-fade-enter, .component-fade-leave-to
-/* .component-fade-leave-active below version 2.1.8 */ {
+.component-fade-enter, .component-fade-leave-to {
   opacity: 0;
 }
 </style>

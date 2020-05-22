@@ -8,13 +8,21 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: {
+      name: 'mainBtn',
+      disable: false
+    }
   },
   {
     path: '/article/:id',
     name: 'About',
     props: true,
-    component: () => import('../components/Article.vue')
+    component: () => import('../components/Article.vue'),
+    meta: {
+      name: 'article',
+      disable: true
+    }
   }
 ]
 

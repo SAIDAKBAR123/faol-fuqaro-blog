@@ -22,7 +22,7 @@
                 </v-item-group>
               </v-col>
               <v-col cols="12">
-                  <v-divider style="background-color:#2F1E84"></v-divider>
+                  <v-divider style="background-color:#2F1E84; width:30%"></v-divider>
               </v-col>
           </v-row>
           <v-row justify-md="space-between" justify="center">
