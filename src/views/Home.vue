@@ -5,15 +5,16 @@
               <v-col cols="12">
                 <v-item-group mandatory>
                     <v-container fluid>
-                        <v-row justify-lg="center">
+                        <v-row >
                             <v-col
                             v-for="(item, n) in problemTypes"
                             :key="n"
                             cols="auto"
                             md="auto"
+                            class="px-1"
                             >
                             <v-item v-slot:default="{ active,toggle }">
-                                <v-btn text :color="active ? 'primary' : ''" @click="getResult(item.id, toggle)">{{item.type}}</v-btn>
+                                <v-btn text :color="active ? 'primary' : ''" @click="getResult(item.id, toggle)">{{$t(item.type)}}</v-btn>
                             </v-item>
                             </v-col>
                         </v-row>
@@ -102,23 +103,23 @@ export default {
       problemTypes: [
         {
           id: '2',
-          type: 'Барчаси'
+          type: 'btn'
         },
         {
           id: '23',
-          type: 'Газ'
+          type: 'button1'
         },
         {
           id: '2w3',
-          type: 'Сув ва оқима тизимлар'
+          type: 'button4'
         },
         {
           id: '233',
-          type: 'Йўл ва белгилар'
+          type: 'button3'
         },
         {
           id: '243',
-          type: 'Электр носозлиги'
+          type: 'button2'
         }
 
       ]

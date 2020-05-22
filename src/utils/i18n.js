@@ -22,7 +22,7 @@ export const i18n = new VueI18n({
     },
     ru: {
       mainBtn: 'Главная страница',
-      btn: 'All',
+      btn: 'все',
       button1: 'газ',
       button2: 'Электричество',
       button3: 'водные и водные системы',
