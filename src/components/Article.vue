@@ -54,7 +54,7 @@ export default {
         { property: 'og:description', content: this.content },
         { property: 'og:image', content: 'https://voicesoncentralasia.org/wp-content/uploads/2018/06/city21.jpg' },
         { property: 'og:type', content: 'article' },
-        { property: 'og:url', content: `https://ff-blog.netlify.app/#/${this.$router.currentRoute.fullPath}` }
+        { property: 'og:url', content: `https://ff-blog.netlify.app/#${this.$router.currentRoute.fullPath}` }
       ]
     }
   },
