@@ -51,8 +51,10 @@ export default {
       title: this.content,
       meta: [
         { charset: 'utf-8' },
-        { name: 'description', content: this.content },
-        { property: 'og:image', content: 'https://voicesoncentralasia.org/wp-content/uploads/2018/06/city21.jpg' }
+        { property: 'og:description', content: this.content },
+        { property: 'og:image', content: 'https://voicesoncentralasia.org/wp-content/uploads/2018/06/city21.jpg' },
+        { property: 'og:type', content: 'article' },
+        { property: 'og:url', content: `https://ff-blog.netlify.app/#/${this.$router.currentRoute.fullPath}` }
       ]
     }
   },
@@ -66,7 +68,7 @@ export default {
     }
   },
   created () {
-    console.log(this.$router.options.routes)
+    console.log(this.$router.currentRoute.fullPath)
     this.routes = this.$router.options.routes.map(el => {
       return {
         text: this.$t(el.meta.name),

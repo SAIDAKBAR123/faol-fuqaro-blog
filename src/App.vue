@@ -71,7 +71,7 @@ export default {
     title: 'Faol fuqaro - yangiliklari',
     meta: [
       { charset: 'utf-8' },
-      { name: 'description', content: 'Faol fuqaro yangliklar sayti | uyda qoling!' },
+      { property: 'og:description', content: 'Faol fuqaro yangliklar sayti | uyda qoling!' },
       { property: 'og:image', content: 'https://image.freepik.com/free-vector/flat-design-ecology-concept-with-natural-elements_23-2148222761.jpg' }
     ]
 
