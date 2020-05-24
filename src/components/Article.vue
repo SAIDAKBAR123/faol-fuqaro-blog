@@ -46,6 +46,16 @@
 
 <script>
 export default {
+  metaInfo () {
+    return {
+      title: this.content,
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'description', content: this.content },
+        { property: 'og:image', content: 'https://voicesoncentralasia.org/wp-content/uploads/2018/06/city21.jpg' }
+      ]
+    }
+  },
   data () {
     return {
       routes: [],

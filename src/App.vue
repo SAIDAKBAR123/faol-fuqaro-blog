@@ -69,8 +69,12 @@ export default {
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
     title: 'Faol fuqaro - yangiliklari',
-    // all titles will be injected into this template
-    titleTemplate: '%s | some topics'
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'description', content: 'Faol fuqaro yangliklar sayti | uyda qoling!' },
+      { property: 'og:image', content: 'https://image.freepik.com/free-vector/flat-design-ecology-concept-with-natural-elements_23-2148222761.jpg' }
+    ]
+
   },
   data: () => ({
 
