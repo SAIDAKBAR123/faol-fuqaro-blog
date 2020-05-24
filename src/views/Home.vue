@@ -70,31 +70,37 @@ export default {
     return {
       newsList: [
         {
+          id: '2',
           header: 'Ўзбекистонда 2020 йилги Рамазон ҳайитини нишонлаш ва ҳайит намозини ўқиш тартиби эълон қилинди',
           imageUrl: 'https://storage.kun.uz/source/6/-IQ7iE2JEpUIOyy69Us4V2msc3u6KNLU.jpg',
           date: '07:00 AM'
         },
         {
+          id: '24',
           header: 'Президент фармони: Тадбиркорлик субъектлари 1 сентябргача мол-мулк ва ер солиғи тўлашдан озод этилади',
           imageUrl: 'https://storage.kun.uz/source/6/eNSQzUIxzLvIyQl_M-g2_r3i5N1dqRJn.jpg',
           date: '2:00 PM'
         },
         {
+          id: '2232',
           header: 'Давлат банкларидан 6таси хусусийлаштирилади',
           imageUrl: 'https://storage.kun.uz/source/6/-ANruVpFecpyY1jzHz-pZVt80I2YlXX3.jpg',
           date: '23:00'
         },
         {
+          id: '2452',
           header: 'Facebook Ўзбекистонда солиқ тўлашни бошлади',
           imageUrl: 'https://storage.kun.uz/source/6/aEi3Q0ZOkmAU3JRKJ86vmwuYUu9elD8S.jpg',
           date: '21:23'
         },
         {
+          id: '234322',
           header: 'Комендантлик соати ва жамоат жойларида янги чекловлар. Дунё мамлакатлари бу йил Рамазон ҳайитини қандай кутмоқда?',
           imageUrl: 'https://storage.kun.uz/source/6/dZl0Hz79sUy3YAN1MIiNTFNvxeEgdfAV.jpg',
           date: '21:23'
         },
         {
+          id: '264',
           header: 'Ўзбекистонда 2020 йилги Рамазон ҳайитини нишонлаш ва ҳайит намозини ўқиш тартиби эълон қилинди',
           imageUrl: 'https://storage.kun.uz/source/6/-IQ7iE2JEpUIOyy69Us4V2msc3u6KNLU.jpg',
           date: '07:00 AM'

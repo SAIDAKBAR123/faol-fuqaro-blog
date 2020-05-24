@@ -5,6 +5,15 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 import './assets/css/main.css'
 import { i18n } from './utils/i18n'
+import VueMeta from 'vue-meta'
+
+Vue.use(VueMeta, {
+  keyName: 'metaInfo',
+  attribute: 'data-vue-meta',
+  ssrAttribute: 'data-vue-meta-server-rendered',
+  tagIDKeyName: 'vmid',
+  refreshOnceOnNavigation: true
+})
 Vue.config.productionTip = false
 
 new Vue({

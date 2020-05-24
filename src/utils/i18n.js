@@ -18,7 +18,8 @@ export const i18n = new VueI18n({
       filter: 'Filter',
       loadMoreBtn: 'Load more',
       shareBtn: 'share',
-      footer: 'made by'
+      footer: 'made by',
+      article: 'article'
     },
     ru: {
       mainBtn: 'Главная страница',
@@ -31,7 +32,8 @@ export const i18n = new VueI18n({
       filter: 'фильтр',
       loadMoreBtn: 'Загрузить больше',
       shareBtn: 'Поделиться',
-      footer: 'сделано в'
+      footer: 'сделано в',
+      article: 'артикль'
     },
     uz: {
       mainBtn: 'Asosiy',
@@ -43,7 +45,9 @@ export const i18n = new VueI18n({
       newsHeader: 'So\'nggi yangiliklar',
       loadMoreBtn: 'Ko\'proq yuklash',
       shareBtn: 'ulashish',
-      footer: 'yaratuvchi:'
+      footer: 'yaratuvchi:',
+      filter: 'filtr',
+      article: 'maqola'
     },
     krill: {
       mainBtn: 'Асосий',
