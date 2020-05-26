@@ -43,13 +43,13 @@
                       <v-card :to="`/article/${item.id}`">
                           <v-img
                             aspect-ratio="1.4"
-                            :src="item.imageUrl"
+                            :src="item.mainImage.mainImageUrl"
                             gradient="180deg, rgba(248, 248, 248, 0.007), rgba(26, 26, 26, 0.884)"
                           >
                             <v-row style="height:100%" align="end">
                                 <v-col align-self="end" cols="auto">
-                                    <p class="white--text pa-2 pb-0 body-text" v-text="item.header"></p>
-                                    <span><v-btn class="body-text py-0" dark :ripple="false" text><v-icon left>mdi-calendar-clock</v-icon>{{item.date}}</v-btn></span>
+                                    <p class="white--text pa-2 pb-0 body-text" v-text="item.title"></p>
+                                    <span><v-btn class="body-text py-0" dark :ripple="false" text><v-icon left>mdi-calendar-clock</v-icon>2 Jan</v-btn></span>
                                 </v-col>
                             </v-row>
                           </v-img>
@@ -60,14 +60,17 @@
              </v-col>
              <v-col  cols="12" md="3" xl="3">
                <div >
-                  <v-card color="transparent" tile flat>
+                  <v-card color="grey lighten-5" tile flat>
                  <v-row justify="center">
+                   <v-col cols="12" class="py-0">
+                     <h3 class="header-text pa-2 text--secondary">E'lonlar</h3>
+                   </v-col>
                    <v-col :class="i == 0 ? 'pb-1' : 'py-1'" v-for="(item,i) in annouce" :key="i" cols="12">
-                     <v-card class="" dark color="#2C313F">
+                     <v-card elevation="0" flat class=""  color="grey lighten-5">
                        <v-card-text class="py-0">
                          <v-row >
                            <v-col align-self="center" cols="auto">
-                             <v-card width="90" height="90" color="rgba(44, 49, 63, 0.815);">
+                             <v-card width="90" height="90" color="grey lighten-5">
                                <v-card-text>
                                  <div class="text-center">
                                    <h1>{{item.day}}</h1>
@@ -103,6 +106,7 @@
 </template>
 
 <script>
+import Get from '../services/Get'
 export default {
   data () {
     return {
@@ -145,80 +149,7 @@ export default {
           path: '/das/23'
         }
       ],
-      newsList: [
-        {
-          id: '2',
-          header: 'Ўзбекистонда 2020 йилги Рамазон ҳайитини нишонлаш ва ҳайит намозини ўқиш тартиби эълон қилинди',
-          imageUrl: 'https://storage.kun.uz/source/6/-IQ7iE2JEpUIOyy69Us4V2msc3u6KNLU.jpg',
-          date: '07:00 AM'
-        },
-        {
-          id: '24',
-          header: 'Президент фармони: Тадбиркорлик субъектлари 1 сентябргача мол-мулк ва ер солиғи тўлашдан озод этилади',
-          imageUrl: 'https://storage.kun.uz/source/6/eNSQzUIxzLvIyQl_M-g2_r3i5N1dqRJn.jpg',
-          date: '2:00 PM'
-        },
-        {
-          id: '2232',
-          header: 'Давлат банкларидан 6таси хусусийлаштирилади',
-          imageUrl: 'https://storage.kun.uz/source/6/-ANruVpFecpyY1jzHz-pZVt80I2YlXX3.jpg',
-          date: '23:00'
-        },
-        {
-          id: '2452',
-          header: 'Facebook Ўзбекистонда солиқ тўлашни бошлади',
-          imageUrl: 'https://storage.kun.uz/source/6/aEi3Q0ZOkmAU3JRKJ86vmwuYUu9elD8S.jpg',
-          date: '21:23'
-        },
-        {
-          id: '234322',
-          header: 'Комендантлик соати ва жамоат жойларида янги чекловлар. Дунё мамлакатлари бу йил Рамазон ҳайитини қандай кутмоқда?',
-          imageUrl: 'https://storage.kun.uz/source/6/dZl0Hz79sUy3YAN1MIiNTFNvxeEgdfAV.jpg',
-          date: '21:23'
-        },
-        {
-          id: '264',
-          header: 'Ўзбекистонда 2020 йилги Рамазон ҳайитини нишонлаш ва ҳайит намозини ўқиш тартиби эълон қилинди',
-          imageUrl: 'https://storage.kun.uz/source/6/-IQ7iE2JEpUIOyy69Us4V2msc3u6KNLU.jpg',
-          date: '07:00 AM'
-        },
-        {
-          id: '2',
-          header: 'Ўзбекистонда 2020 йилги Рамазон ҳайитини нишонлаш ва ҳайит намозини ўқиш тартиби эълон қилинди',
-          imageUrl: 'https://storage.kun.uz/source/6/-IQ7iE2JEpUIOyy69Us4V2msc3u6KNLU.jpg',
-          date: '07:00 AM'
-        },
-        {
-          id: '24',
-          header: 'Президент фармони: Тадбиркорлик субъектлари 1 сентябргача мол-мулк ва ер солиғи тўлашдан озод этилади',
-          imageUrl: 'https://storage.kun.uz/source/6/eNSQzUIxzLvIyQl_M-g2_r3i5N1dqRJn.jpg',
-          date: '2:00 PM'
-        },
-        {
-          id: '2232',
-          header: 'Давлат банкларидан 6таси хусусийлаштирилади',
-          imageUrl: 'https://storage.kun.uz/source/6/-ANruVpFecpyY1jzHz-pZVt80I2YlXX3.jpg',
-          date: '23:00'
-        },
-        {
-          id: '2452',
-          header: 'Facebook Ўзбекистонда солиқ тўлашни бошлади',
-          imageUrl: 'https://storage.kun.uz/source/6/aEi3Q0ZOkmAU3JRKJ86vmwuYUu9elD8S.jpg',
-          date: '21:23'
-        },
-        {
-          id: '234322',
-          header: 'Комендантлик соати ва жамоат жойларида янги чекловлар. Дунё мамлакатлари бу йил Рамазон ҳайитини қандай кутмоқда?',
-          imageUrl: 'https://storage.kun.uz/source/6/dZl0Hz79sUy3YAN1MIiNTFNvxeEgdfAV.jpg',
-          date: '21:23'
-        },
-        {
-          id: '264',
-          header: 'Ўзбекистонда 2020 йилги Рамазон ҳайитини нишонлаш ва ҳайит намозини ўқиш тартиби эълон қилинди',
-          imageUrl: 'https://storage.kun.uz/source/6/-IQ7iE2JEpUIOyy69Us4V2msc3u6KNLU.jpg',
-          date: '07:00 AM'
-        }
-      ],
+      newsList: [],
       problemTypes: [
         {
           id: '2',
@@ -248,7 +179,18 @@ export default {
     getResult (val, toggle) {
       console.log(val)
       toggle()
+    },
+    getAll () {
+      Get.getPosts(this.$store.state.lang).then(res => {
+        console.log(res)
+        this.newsList = res
+      }).catch(err => {
+        console.log(err)
+      })
     }
+  },
+  created () {
+    this.getAll()
   }
 }
 </script>
@@ -256,6 +198,6 @@ export default {
 <style scoped>
 .das{
 color: rgba(44, 49, 63, 0.815);
-color: rgb(231, 231, 231);
+color: rgb(245, 245, 245);
 }
 </style>

@@ -4,8 +4,10 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 import './assets/css/main.css'
+// import './assets/js/sharer.min.js'
 import { i18n } from './utils/i18n'
 import VueMeta from 'vue-meta'
+Vue.use(require('vue-moment'))
 
 Vue.use(VueMeta, {
   keyName: 'metaInfo',
