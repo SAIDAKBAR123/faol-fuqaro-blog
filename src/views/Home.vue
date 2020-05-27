@@ -66,7 +66,7 @@
                      <h3 class="header-text pa-2 text--secondary">E'lonlar</h3>
                    </v-col>
                    <v-col :class="i == 0 ? 'pb-1' : 'py-1'" v-for="(item,i) in annouce" :key="i" cols="12">
-                     <v-card elevation="0" flat class=""  color="grey lighten-5">
+                     <v-card :to="`/announcement/${item.id}`" elevation="0" flat class=""  color="grey lighten-5">
                        <v-card-text class="py-0">
                          <v-row >
                            <v-col align-self="center" cols="auto">
@@ -120,33 +120,6 @@ export default {
           title: 'Toshkent shahridagi Inha universitetga qabul boshlandi',
           subtitle: 'Har qanday qoshimcha malumotlarni quydagi sarlovha ostidan bilib olishingiz mumkin',
           path: '/das/23'
-        },
-        {
-          day: '4',
-          month: 'Apr',
-          year: '2020',
-          period: '14:00 ~ 20:00',
-          title: 'Ilovada yangi o\'zgarishlar yuz berdi! yanglilang',
-          subtitle: 'Endilikda muamodagi yangi yechimlarni quydagi tartibda hal etishingiz mumkin...',
-          path: '/das/23'
-        },
-        {
-          day: '24',
-          month: 'Jun',
-          year: '2020',
-          period: '14:00 ~ 20:00',
-          title: 'Ilova 2.00 versiya talqiniga o\'tdi!',
-          subtitle: 'Endilikda bir vaqtda bir nechta muamoni oldini olish imkoniyatiga ega bolasiz',
-          path: '/das/23'
-        },
-        {
-          day: '2',
-          month: 'Sep',
-          year: '2020',
-          period: '14:00 ~ 20:00',
-          title: 'Toshkent shahridagi Inha universitetga qabul boshlandi',
-          subtitle: 'Har qanday qoshimcha malumotlarni quydagi sarlovha ostidan bilib olishingiz mumkin',
-          path: '/das/23'
         }
       ],
       newsList: [],
@@ -184,6 +157,12 @@ export default {
       Get.getPosts(this.$store.state.lang).then(res => {
         console.log(res)
         this.newsList = res
+      }).catch(err => {
+        console.log(err)
+      })
+      Get.getAnnouncements(this.$store.state.lang).then(res => {
+        this.annouce = res
+        console.log(res)
       }).catch(err => {
         console.log(err)
       })

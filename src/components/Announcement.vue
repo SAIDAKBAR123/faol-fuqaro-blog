@@ -74,8 +74,9 @@ export default {
     }
   },
   methods: {
-    getSinglePost () {
-      Get.getSinglePost(this.id, this.$store.state.lang).then(res => {
+    getSingleAnnouncement () {
+      Get.getSingleAnnouncement(this.id, this.$store.state.lang).then(res => {
+        console.log(res)
         this.title = res.title
         this.body = res.body
         this.mainImageUrl = res.mainImage.mainImageUrl
@@ -87,7 +88,7 @@ export default {
     }
   },
   created () {
-    this.getSinglePost()
+    this.getSingleAnnouncement()
     this.routes = this.$router.options.routes.map(el => {
       return {
         text: this.$t(el.meta.name),

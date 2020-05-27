@@ -23,6 +23,16 @@ const routes = [
       name: 'article',
       disable: true
     }
+  },
+  {
+    path: '/announcement/:id',
+    name: 'Announcement',
+    props: true,
+    component: () => import('../components/Announcement.vue'),
+    meta: {
+      name: 'announce',
+      disable: true
+    }
   }
 ]
 
