@@ -34,7 +34,7 @@
               </v-col>
           </v-row>
           <v-row>
-             <v-col cols="12" md="9" xl="9">
+             <v-col cols="12" md="8" xl="9">
                <v-row >
                   <v-col  v-for="(item,i) in newsList" :key="i" cols="12" md="4" lg="4">
                     <v-hover
@@ -58,7 +58,7 @@
                 </v-col>
                </v-row>
              </v-col>
-             <v-col  cols="12" md="3" xl="3">
+             <v-col  cols="12" md="4" xl="3">
                <div >
                   <v-card color="grey lighten-5" tile flat>
                  <v-row justify="center">
@@ -73,9 +73,9 @@
                              <v-card width="90" height="90" color="grey lighten-5">
                                <v-card-text>
                                  <div class="text-center">
-                                   <h1>{{item.day}}</h1>
-                                   <h2>{{item.month}}</h2>
-                                   <small>{{item.year}}</small>
+                                   <h1>{{item.createdAt | moment("Do") }}</h1>
+                                   <h2>{{item.createdAt  | moment("MMM") }} </h2>
+                                   <small>{{ item.createdAt | moment("YYYY") }}</small>
                                  </div>
                                </v-card-text>
                              </v-card>
