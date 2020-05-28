@@ -37,7 +37,7 @@
       </v-list>
     </v-menu>
       <v-btn
-        href="https://faolfuqaro.netlify.app/"
+        href="http://ff-landing.sunbet.uz/"
         text
         dark
         rounded
