@@ -72,8 +72,8 @@
                            <v-col align-self="center" cols="auto">
                              <v-card width="90" height="90" color="grey lighten-5">
                                <v-card-text>
-                                 <div class="text-center">
-                                   <h1>{{item.createdAt | moment("Do") }}</h1>
+                                 <div v-if="item.createdAt" class="text-center">
+                                   <h1>{{item.createdAt | moment("D") }}</h1>
                                    <h2>{{item.createdAt  | moment("MMM") }} </h2>
                                    <small>{{ item.createdAt | moment("YYYY") }}</small>
                                  </div>
@@ -154,7 +154,7 @@ export default {
       toggle()
     },
     getAll () {
-      Get.getPosts(this.$store.state.lang).then(res => {
+      Get.getPosts(1, this.$store.state.lang).then(res => {
         console.log(res)
         this.newsList = res
       }).catch(err => {
@@ -170,6 +170,7 @@ export default {
   },
   created () {
     this.getAll()
+    console.log(this.$moment.locale('ru'))
   }
 }
 </script>

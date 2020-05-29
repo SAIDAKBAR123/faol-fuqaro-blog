@@ -19,6 +19,7 @@ Vue.use(VueMeta, {
 Vue.config.productionTip = false
 
 new Vue({
+
   i18n,
   router,
   store,
