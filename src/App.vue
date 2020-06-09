@@ -49,7 +49,9 @@
 
     <v-content>
       <transition name="component-fade" mode="out-in">
+        <keep-alive>
       <router-view></router-view>
+      </keep-alive>
       </transition>
       <v-footer padless >
         <v-col

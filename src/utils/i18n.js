@@ -19,7 +19,9 @@ export const i18n = new VueI18n({
       loadMoreBtn: 'Load more',
       shareBtn: 'share',
       footer: 'made by',
-      article: 'article'
+      article: 'article',
+      announce: 'announce',
+      reachedText: 'You’ve reached the end of the list'
     },
     ru: {
       mainBtn: 'Главная страница',
@@ -33,7 +35,9 @@ export const i18n = new VueI18n({
       loadMoreBtn: 'Загрузить больше',
       shareBtn: 'Поделиться',
       footer: 'сделано в',
-      article: 'артикль'
+      article: 'артикль',
+      announce: '',
+      reachedText: 'Вы достигли конца списка'
     },
     uz: {
       mainBtn: 'Asosiy',
@@ -47,7 +51,9 @@ export const i18n = new VueI18n({
       shareBtn: 'ulashish',
       footer: 'yaratuvchi:',
       filter: 'filtr',
-      article: 'maqola'
+      article: 'maqola',
+      announce: '',
+      reachedText: 'Siz ro\'yxat oxiriga yetdingiz'
     },
     krill: {
       mainBtn: 'Асосий',

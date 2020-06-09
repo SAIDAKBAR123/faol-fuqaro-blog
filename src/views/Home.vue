@@ -49,7 +49,7 @@
                             <v-row style="height:100%" align="end">
                                 <v-col align-self="end" cols="auto">
                                     <p class="white--text pa-2 pb-0 body-text" v-text="item.title"></p>
-                                    <span><v-btn class="body-text py-0" dark :ripple="false" text><v-icon left>mdi-calendar-clock</v-icon>2 Jan</v-btn></span>
+                                    <span><v-btn class="body-text py-0 text-capitalize" dark :ripple="false" text><v-icon left>mdi-calendar-clock</v-icon>{{item.createdAt | moment("D MMM, YYYY")}}</v-btn></span>
                                 </v-col>
                             </v-row>
                           </v-img>
@@ -97,9 +97,17 @@
              </v-col>
           </v-row>
           <v-row justify="center">
-              <v-col cols="auto">
-                  <v-btn rounded text color="primary"> {{$t('loadMoreBtn')}}</v-btn>
+            <v-col v-if="isLast" cols="12">
+                  <div class="text-center"><v-chip disabled :ripple="false" class="text-center">{{$t('reachedText')}}</v-chip></div>
+            </v-col>
+              <v-col v-if="!isLast" cols="auto">
+                  <v-btn  @click="loadMore" rounded text color="primary"> {{$t('loadMoreBtn')}}</v-btn>
               </v-col>
+          </v-row>
+          <v-row>
+             <v-overlay :value="overlay">
+                <v-progress-circular indeterminate size="64"></v-progress-circular>
+            </v-overlay>
           </v-row>
       </v-container>
   </div>
@@ -110,6 +118,8 @@ import Get from '../services/Get'
 export default {
   data () {
     return {
+      isLast: false,
+      overlay: false,
       sizeHeight: window.innerHeight,
       annouce: [
         {
@@ -149,6 +159,21 @@ export default {
     }
   },
   methods: {
+    loadMore () {
+      this.overlay = true
+      this.$store.commit('setCounter', this.$store.state.counter + 1)
+      Get.getPosts(this.$store.state.counter, this.$store.state.lang).then(res => {
+        if (res.length === 0) this.isLast = true
+        res.forEach(el => {
+          this.newsList.push(el)
+        })
+        console.log(res)
+        this.overlay = false
+      }).catch(err => {
+        this.overlay = false
+        console.log(err)
+      })
+    },
     getResult (val, toggle) {
       console.log(val)
       toggle()
