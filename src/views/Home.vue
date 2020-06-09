@@ -34,7 +34,7 @@
               </v-col>
           </v-row>
           <v-row>
-             <v-col cols="12" md="8" xl="9">
+             <v-col cols="12" md="9" xl="9">
                <v-row >
                   <v-col  v-for="(item,i) in newsList" :key="i" cols="12" md="4" lg="4">
                     <v-hover
@@ -58,18 +58,18 @@
                 </v-col>
                </v-row>
              </v-col>
-             <v-col  cols="12" md="4" xl="3">
+             <v-col  cols="12" md="3" xl="3">
                <div >
                   <v-card color="grey lighten-5" tile flat>
                  <v-row justify="center">
                    <v-col cols="12" class="py-0">
                      <h3 class="header-text pa-2 text--secondary">E'lonlar</h3>
                    </v-col>
-                   <v-col :class="i == 0 ? 'pb-1' : 'py-1'" v-for="(item,i) in annouce" :key="i" cols="12">
+                   <v-col :class="i == 0 ? 'pb-1' : 'py-1'" v-for="(item,i) in annouce" :key="i" cols="12" >
                      <v-card :to="`/announcement/${item.id}`" elevation="0" flat class=""  color="grey lighten-5">
                        <v-card-text class="py-0">
                          <v-row >
-                           <v-col align-self="center" cols="auto">
+                           <v-col align-self="center" cols="auto" >
                              <v-card width="90" height="90" color="grey lighten-5">
                                <v-card-text>
                                  <div v-if="item.createdAt" class="text-center">
@@ -80,7 +80,7 @@
                                </v-card-text>
                              </v-card>
                            </v-col>
-                           <v-col cols="8">
+                           <v-col cols="12" md="12" xl="8">
                              <h4 class=" text--white">{{item.title}}</h4>
                              <p>{{item.subtitle}}</p>
                            </v-col>
