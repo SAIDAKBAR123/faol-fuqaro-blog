@@ -76,11 +76,12 @@ export default {
   methods: {
     getSinglePost () {
       Get.getSinglePost(this.id, this.$store.state.lang).then(res => {
-        this.title = res.title
-        this.body = res.body
-        this.mainImageUrl = res.mainImage.mainImageUrl
-        this.timesSeen = res.timesSeen
-        this.updatedAt = res.updatedAt
+        console.log(res)
+        this.title = res.post.title
+        this.body = res.post.body
+        this.mainImageUrl = res.post.mainImage.mainImageUrl
+        this.timesSeen = res.post.timesSeen
+        this.updatedAt = res.post.updatedAt
       }).catch(err => {
         console.log(err)
       })
