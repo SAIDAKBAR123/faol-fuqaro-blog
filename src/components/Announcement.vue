@@ -77,11 +77,11 @@ export default {
     getSingleAnnouncement () {
       Get.getSingleAnnouncement(this.id, this.$store.state.lang).then(res => {
         console.log(res)
-        this.title = res.title
-        this.body = res.body
-        this.mainImageUrl = res.mainImage.mainImageUrl
-        this.timesSeen = res.timesSeen
-        this.updatedAt = res.updatedAt
+        this.title = res.announcement.title
+        this.body = res.announcement.body
+        this.mainImageUrl = res.announcement.mainImage.mainImageUrl
+        this.timesSeen = res.views
+        this.updatedAt = res.announcement.updatedAt
       }).catch(err => {
         console.log(err)
       })
