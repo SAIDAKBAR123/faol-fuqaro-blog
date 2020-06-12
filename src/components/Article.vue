@@ -80,7 +80,7 @@ export default {
         this.title = res.post.title
         this.body = res.post.body
         this.mainImageUrl = res.post.mainImage.mainImageUrl
-        this.timesSeen = res.post.timesSeen
+        this.timesSeen = res.views
         this.updatedAt = res.post.updatedAt
       }).catch(err => {
         console.log(err)
