@@ -37,7 +37,7 @@
       </v-list>
     </v-menu>
       <v-btn
-        href="http://ff-landing.sunbet.uz/"
+        href="https://faolfuqaro.uz/"
         text
         dark
         rounded
