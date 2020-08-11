@@ -30,7 +30,7 @@ export const i18n = new VueI18n({
       button2: 'Электричество',
       button3: 'водные и водные системы',
       button4: 'дорога и знаки',
-      newsHeader: 'Свежие новости',
+      newsHeader: 'Последние новости',
       filter: 'фильтр',
       loadMoreBtn: 'Загрузить больше',
       shareBtn: 'Поделиться',

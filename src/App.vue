@@ -91,7 +91,7 @@ export default {
       },
       {
         type: 'ru',
-        name: 'русский'
+        name: 'Русский'
       }
     ]
     //

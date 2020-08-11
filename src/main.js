@@ -7,7 +7,12 @@ import './assets/css/main.css'
 // import './assets/js/sharer.min.js'
 import { i18n } from './utils/i18n'
 import VueMeta from 'vue-meta'
-Vue.use(require('vue-moment'))
+const moment = require('moment')
+require('moment/locale/ru')
+
+Vue.use(require('vue-moment'), {
+  moment
+})
 
 Vue.use(VueMeta, {
   keyName: 'metaInfo',

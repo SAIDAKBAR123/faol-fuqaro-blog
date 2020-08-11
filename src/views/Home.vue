@@ -72,10 +72,10 @@
                            <v-col align-self="center" cols="auto" >
                              <v-card width="90" height="90" color="grey lighten-5">
                                <v-card-text>
-                                 <div v-if="item.createdAt" class="text-center">
-                                   <h1>{{item.createdAt | moment("D") }}</h1>
-                                   <h2>{{item.createdAt  | moment("MMM") }} </h2>
-                                   <small>{{ item.createdAt | moment("YYYY") }}</small>
+                                 <div v-if="item.expiryDate" class="text-center">
+                                   <h1>{{item.expiryDate | moment("D") }}</h1>
+                                   <h2>{{item.expiryDate  | moment("MMM") }} </h2>
+                                   <small>{{ item.expiryDate | moment("YYYY") }}</small>
                                  </div>
                                </v-card-text>
                              </v-card>
